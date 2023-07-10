@@ -21,4 +21,10 @@ public class PostsController : ControllerBase
         var posts = await _postService.GetAll();
         return Ok(posts);
     }
+    
+    [HttpPost]
+    public async Task<ActionResult<PostDTO>> CreatePost([FromBody] PostCreateDTO dto)
+    {
+        return Ok(await _postService.CreatePost(dto));
+    }
 }

@@ -30,4 +30,19 @@ public class PostService: BaseService, IPostService
             .ProjectTo<PostDTO>(_mapper.ConfigurationProvider)
             .ToListAsync();
     }
+
+    public async Task<PostDTO> CreatePost(PostCreateDTO postCreateDto)
+    {
+        var postEntity = _mapper.Map<Post>(postCreateDto);
+        
+        _context.Posts.Add(postEntity);
+        await _context.SaveChangesAsync();
+        
+        var createdPost = await _context.Posts
+            .FirstAsync(post => post.Id == postEntity.Id);
+
+        var createdPostDTO = _mapper.Map<PostDTO>(createdPost);
+
+        return createdPostDTO;
+    }
 }

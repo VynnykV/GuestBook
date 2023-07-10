@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.ConfigureDALServices(builder.Configuration);
 builder.Services.RegisterCustomServices();
 builder.Services.AddAutoMapper();
+builder.Services.AddValidation();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

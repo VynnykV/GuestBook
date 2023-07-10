@@ -7,4 +7,5 @@ namespace GuestBook.BLL.Interfaces;
 public interface IPostService
 {
     Task<ICollection<PostDTO>> GetAll(Expression<Func<Post, bool>>? predicate = null);
+    Task<PostDTO> CreatePost(PostCreateDTO postCreateDto);
 }
