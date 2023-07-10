@@ -7,6 +7,6 @@ public abstract class BaseEntity
 
     protected BaseEntity()
     {
-        CreatedAt = new DateTimeOffset().UtcDateTime;
+        CreatedAt = DateTime.UtcNow;
     }
 }
