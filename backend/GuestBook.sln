@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestBook.DAL", "GuestBook.DAL\GuestBook.DAL.csproj", "{D2725772-4F65-47DE-A31A-A77AE2924956}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestBook.Common", "GuestBook.Common\GuestBook.Common.csproj", "{97A568AC-B0B1-4447-859C-ECCC7324E9A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestBook.WebAPI", "GuestBook.WebAPI\GuestBook.WebAPI.csproj", "{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2725772-4F65-47DE-A31A-A77AE2924956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2725772-4F65-47DE-A31A-A77AE2924956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2725772-4F65-47DE-A31A-A77AE2924956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2725772-4F65-47DE-A31A-A77AE2924956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A568AC-B0B1-4447-859C-ECCC7324E9A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A568AC-B0B1-4447-859C-ECCC7324E9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A568AC-B0B1-4447-859C-ECCC7324E9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A568AC-B0B1-4447-859C-ECCC7324E9A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
