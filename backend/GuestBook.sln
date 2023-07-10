@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestBook.Common", "GuestBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestBook.WebAPI", "GuestBook.WebAPI\GuestBook.WebAPI.csproj", "{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestBook.BLL", "GuestBook.BLL\GuestBook.BLL.csproj", "{1FB11158-FB22-4A58-8CD2-272B6FE05A86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BA1ED01-DB9A-469D-8D8B-7547E6CC8D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB11158-FB22-4A58-8CD2-272B6FE05A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB11158-FB22-4A58-8CD2-272B6FE05A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB11158-FB22-4A58-8CD2-272B6FE05A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB11158-FB22-4A58-8CD2-272B6FE05A86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
