@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GuestBook.BLL.Services;
 
-public class PostService: BaseService, IPostService
+public sealed class PostService: BaseService, IPostService
 {
     public PostService(
         GuestBookContext context, 

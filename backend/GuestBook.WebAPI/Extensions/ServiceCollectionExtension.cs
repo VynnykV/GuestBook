@@ -13,6 +13,7 @@ public static class ServiceCollectionExtension
     public static void RegisterCustomServices(this IServiceCollection services)
     {
         services.AddTransient<IPostService, PostService>();
+        services.AddTransient<ICommentService, CommentService>();
     }
     
     public static void AddAutoMapper(this IServiceCollection services)
