@@ -8,8 +8,6 @@ public class CommentCreateDTOValidator: AbstractValidator<CommentCreateDTO>
 {
     public CommentCreateDTOValidator()
     {
-        RuleFor(x => x.PostId)
-            .NotNull();
         RuleFor(x => x.Author)
             .NotEmpty()
             .MaximumLength(CommentConstraints.AuthorMaxLength);
