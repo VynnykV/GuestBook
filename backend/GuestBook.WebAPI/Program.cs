@@ -28,6 +28,11 @@ app.UseMiddleware<GenericExceptionHandlerMiddleware>();
 
 app.MigrateDB();
 
+app.UseCors(opt => opt
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowAnyOrigin());
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
