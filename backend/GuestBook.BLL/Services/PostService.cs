@@ -18,7 +18,7 @@ public sealed class PostService: BaseService, IPostService
     public async Task<ICollection<PostDTO>> GetAll()
     {
         var posts = await _context.Posts
-            .Include(x => x.Comments.OrderByDescending(c => c.CreatedAt))
+            .Include(x => x.Comments)
             .OrderByDescending(p => p.CreatedAt)
             .ToListAsync();
 
