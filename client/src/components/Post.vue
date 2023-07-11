@@ -1,11 +1,13 @@
 <template>
-  <comment :comment="post"></comment>
-  <comment class="under_comment"
-          v-for="comment in post.comments"
-          :comment="comment"
-          :post-id="post.id"
-  >
-  </comment>
+    <div class="post">
+        <comment :comment="post"></comment>
+        <comment class="under_comment"
+                 v-for="comment in post.comments"
+                 :comment="comment"
+                 :post-id="post.id"
+        >
+        </comment>
+    </div>
   <hr>
 </template>
 
@@ -24,6 +26,9 @@
 </script>
 
 <style scoped>
+  .post {
+      width: 100%;
+  }
   .under_comment {
       margin-left: 15px;
   }

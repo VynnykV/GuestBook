@@ -2,7 +2,7 @@
   <div class="app">
       <div class="content">
           <post-form @create="createPost" class="post_form"></post-form>
-          <div v-if="!loading">
+          <div class="posts" v-if="!loading">
               <post
                   v-for="post in posts"
                   :post="post">
@@ -77,6 +77,10 @@
 
   .post_form {
       margin-bottom: 10px;
+  }
+
+  .posts {
+      width: 100%;
   }
 
   .content {
