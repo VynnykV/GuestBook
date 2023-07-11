@@ -16,6 +16,8 @@
   import PostForm from "./components/PostForm.vue";
   import api from './services/GuestBookApiService'
   import Post from "@/components/Post.vue";
+  import CommentForm from "@/components/CommentForm.vue";
+  import commentCreatedBuss from "@/services/CommentEmitter";
 
   export default {
       data() {
@@ -44,11 +46,15 @@
         }
       },
       components: {
+          CommentForm,
           Post,
           PostForm
       },
-      mounted() {
-          this.fetchAllPosts();
+      async mounted() {
+          await this.fetchAllPosts();
+          commentCreatedBuss.on('commentCreated', async () => {
+              await this.fetchAllPosts();
+          })
       }
   }
 </script>
@@ -84,5 +90,42 @@
 
   .invalid-feedback {
       color: red;
+      font-size: 15px;
+      visibility: hidden;
+      height: 20px;
+  }
+
+  .invalid-feedback.active {
+      visibility: visible;
+  }
+
+  .form__input {
+      width: 100%;
+      border: 1px solid teal;
+      padding: 10px 15px;
+      margin-top: 15px;
+  }
+
+  .form__button {
+      padding: 10px 15px;
+      background: none;
+      color: teal;
+      border: 1px solid teal;
+      align-self: flex-end;
+      margin-bottom: 20px;
+      margin-top: 15px;
+  }
+
+  .form__button:hover {
+      cursor: pointer;
+      opacity: 75%;
+  }
+
+  .form__button:focus {
+      outline: 0;
+  }
+
+  .form-group {
+      width: 100%;
   }
 </style>

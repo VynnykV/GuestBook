@@ -20,5 +20,8 @@ export default {
     },
     async createPost(post) {
         return await this.execute('post', '/posts', post)
+    },
+    async createComment(comment) {
+        return await this.execute('post', '/comments', comment)
     }
 }

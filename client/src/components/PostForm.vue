@@ -4,7 +4,7 @@
         <div class="form-group">
             <input
                 v-model="post.author"
-                class="post_form__input"
+                class="form__input"
                 type="text"
                 placeholder="Author's name"
             />
@@ -18,7 +18,7 @@
         <div class="form-group">
             <input
                 v-model="post.body"
-                class="post_form__input"
+                class="form__input"
                 type="text"
                 placeholder="Comment"
             />
@@ -30,7 +30,7 @@
         </div>
 
         <button
-                class="post_form__button"
+                class="form__button"
                 @click="createPost"
         >
             Add new comment
@@ -82,31 +82,6 @@ export default {
 
     .post_form__title {
         font-size: 24px;
-    }
-
-    .post_form__input {
-        width: 100%;
-        border: 1px solid teal;
-        padding: 10px 15px;
-        margin-top: 15px;
-    }
-
-    .post_form__button {
-        padding: 10px 15px;
-        background: none;
-        color: teal;
-        border: 1px solid teal;
-        align-self: flex-end;
-        margin-top: 15px
-    }
-
-    .post_form__button:hover {
-        cursor: pointer;
-        opacity: 75%;
-    }
-
-    .post_form__button:focus {
-        outline: 0;
     }
 }
 
