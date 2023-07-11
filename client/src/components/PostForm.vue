@@ -8,7 +8,7 @@
                 type="text"
                 placeholder="Author's name"
             />
-            <div v-if="v$.post.author.$error" class="invalid-feedback">
+            <div :class="{'invalid-feedback': true, 'active': v$.post.author.$error}">
                 <span v-for="error in v$.post.author.$errors">
                     {{ error.$message }}
                 </span>
@@ -22,7 +22,7 @@
                 type="text"
                 placeholder="Comment"
             />
-            <div v-if="v$.post.body.$error" class="invalid-feedback">
+            <div :class="{'invalid-feedback': true, 'active': v$.post.body.$error}">
                 <span v-for="error in v$.post.body.$errors">
                     {{ error.$message }}
                 </span>

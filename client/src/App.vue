@@ -92,7 +92,7 @@
       color: red;
       font-size: 15px;
       visibility: hidden;
-      height: 20px;
+      height: 10px;
   }
 
   .invalid-feedback.active {
@@ -113,7 +113,7 @@
       border: 1px solid teal;
       align-self: flex-end;
       margin-bottom: 20px;
-      margin-top: 15px;
+      margin-top: 25px;
   }
 
   .form__button:hover {

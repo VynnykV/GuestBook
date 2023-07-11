@@ -3,6 +3,7 @@
   <comment class="under_comment"
           v-for="comment in post.comments"
           :comment="comment"
+          :post-id="post.id"
   >
   </comment>
   <hr>

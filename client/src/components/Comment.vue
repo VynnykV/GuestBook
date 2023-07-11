@@ -29,6 +29,7 @@
   export default {
       components: {CommentForm},
       props: {
+          postId: 0,
           comment: {
               type: Object,
               required: true,
@@ -40,16 +41,16 @@
           }
       },
       methods: {
+          get_post_id() {
+              const post_id = this.postId
+                ? this.postId
+                : this.comment.id;
+
+              return post_id;
+          },
           format_date(value) {
               if (value) {
                   return moment(String(value)).format('DD.MM.YYYY hh:mm')
-              }
-          },
-          get_post_id() {
-              if (this.comment.postId)
-                  return this.comment.postId;
-              else {
-                  return this.comment.id
               }
           },
           answer_button_clicked() {
