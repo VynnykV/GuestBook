@@ -1,7 +1,7 @@
 <template>
   <div class="app">
       <div class="content">
-          <post-form class="post_form"></post-form>
+          <post-form @create="createPost" class="post_form"></post-form>
           <div v-if="!loading">
               <post
                   v-for="post in posts"
@@ -33,14 +33,22 @@
             } finally {
                 this.loading = false;
             }
+        },
+        async createPost(post) {
+            try {
+                await api.createPost(post)
+                await this.fetchAllPosts()
+            } catch (ex) {
+                console.log(ex)
+            }
         }
       },
       components: {
           Post,
           PostForm
       },
-      async mounted() {
-          await this.fetchAllPosts();
+      mounted() {
+          this.fetchAllPosts();
       }
   }
 </script>
@@ -72,5 +80,9 @@
       flex-direction: column;
       align-items: center;
       padding: 25px;
+  }
+
+  .invalid-feedback {
+      color: red;
   }
 </style>

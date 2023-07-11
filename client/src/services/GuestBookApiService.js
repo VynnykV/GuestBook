@@ -18,7 +18,7 @@ export default {
     async getAllPosts() {
         return await this.execute('get', '/posts')
     },
-    // create(data) {
-    //     return this.execute('post', '/', data)
-    // }
+    async createPost(post) {
+        return await this.execute('post', '/posts', post)
+    }
 }
